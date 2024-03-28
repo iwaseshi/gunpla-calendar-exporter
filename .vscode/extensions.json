@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "golang.go",
+        "windmilleng.vscode-go-autotest",
+        "golang.go-nightly"
+    ]
+}
