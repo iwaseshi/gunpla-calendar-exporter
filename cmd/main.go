@@ -11,5 +11,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	_ = generate.Ics(month, schedule)
+	err = generate.Ics(month, schedule)
+	if err != nil {
+		panic(err)
+	}
 }
