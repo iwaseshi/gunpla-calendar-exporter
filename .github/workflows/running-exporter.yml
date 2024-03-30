@@ -5,7 +5,7 @@ on:
     - cron: "0 15 14 * *" # 毎月15日の日本時間0時（UTCの前日15時）
     - cron: "0 15 24 * *" # 毎月25日の日本時間0時（UTCの前日15時）
     - cron: "40 15 31 * *" # test
-    - cron: "53 * * * *" # test
+    - cron: "08 * * * *" # test
 
 jobs:
   build-and-run:
@@ -28,3 +28,10 @@ jobs:
         with:
           name: ics-file
           path: ${{ github.workspace }}/gen/*.ics
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add gen/
+          git commit -m "Add generated ICS file" -a || echo "No changes to commit"
+          git push
