@@ -4,13 +4,15 @@ on:
   schedule:
     - cron: "0 15 14 * *" # 毎月15日の日本時間0時（UTCの前日15時）
     - cron: "0 15 24 * *" # 毎月25日の日本時間0時（UTCの前日15時）
-    - cron: "0 0 31 * *"
+    - cron: "02 * * * *" # test
 
 jobs:
   build-and-run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.YOUR_SECRET_NAME }}
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
@@ -19,9 +21,16 @@ jobs:
         run: go mod tidy
       - name: Build and Run App
         run: |
-          go build -v ./cmd/main.go
+          go build -v ./main.go
           ./main
         working-directory: ${{ github.workspace }}
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add gen/
+          git commit -m "Add generated ICS file" -a || echo "No changes to commit"
+          git push --force origin
       - name: Upload ICS File
         uses: actions/upload-artifact@v3
         with:
