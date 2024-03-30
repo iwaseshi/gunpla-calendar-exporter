@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 15 14 * *" # 毎月15日の日本時間0時（UTCの前日15時）
     - cron: "0 15 24 * *" # 毎月25日の日本時間0時（UTCの前日15時）
-    - cron: "5 15 31 * *" # test
+    - cron: "10 15 30 * *" # test
 
 jobs:
   build-and-run:
