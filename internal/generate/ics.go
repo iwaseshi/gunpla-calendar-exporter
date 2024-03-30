@@ -3,6 +3,7 @@ package generate
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"time"
 
 	ical "github.com/arran4/golang-ical"
@@ -21,7 +22,7 @@ func Ics(filename string, source map[time.Time][]string) error {
 
 		}
 	}
-	file, err := os.Create(filename + ".ics")
+	file, err := os.Create(filepath.Join("./gen", filename+".ics"))
 	if err != nil {
 		fmt.Println("Error creating ICS file:", err)
 		return err
