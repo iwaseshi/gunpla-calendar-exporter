@@ -1,0 +1,29 @@
+name: Run Gunpla-calendar-exporter
+
+on:
+  schedule:
+    - cron: "0 15 14 * *" # 毎月15日の日本時間0時（UTCの前日15時）
+    - cron: "0 15 24 * *" # 毎月25日の日本時間0時（UTCの前日15時）
+    - cron: "0 15 31 * *"
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: go.mod
+      - name: Install Dependencies
+        run: go mod tidy
+      - name: Build and Run App
+        run: |
+          go build -v ./cmd/main.go
+          ./main
+        working-directory: ${{ github.workspace }}
+      - name: Upload ICS File
+        uses: actions/upload-artifact@v3
+        with:
+          name: ics-file
+          path: ${{ github.workspace }}/gen/*.ics
