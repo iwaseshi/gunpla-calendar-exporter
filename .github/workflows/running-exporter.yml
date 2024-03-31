@@ -22,7 +22,7 @@ jobs:
           ./main
         working-directory: ${{ github.workspace }}
       - name: Upload ICS File
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ics-file
           path: ${{ github.workspace }}/gen/*.ics
