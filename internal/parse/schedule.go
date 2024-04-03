@@ -3,7 +3,6 @@ package parse
 import (
 	"context"
 	"fmt"
-	"log"
 	"regexp"
 	"strings"
 	"time"
@@ -44,7 +43,10 @@ func Schedule(url string) (map[time.Time][]string, error) {
 			return nil
 		}),
 	); err != nil {
-		log.Fatal(err)
+		return nil, err
+	}
+	if len(result) == 0 {
+		return nil, fmt.Errorf("スケジュールが取得できませんでした。")
 	}
 	for k, v := range result {
 		fmt.Printf("Key: %s \n Value: %v\n\n", k, v)

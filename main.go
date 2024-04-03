@@ -3,6 +3,7 @@ package main
 import (
 	"gunpla-calendar-exporter/internal/generate"
 	"gunpla-calendar-exporter/internal/parse"
+	"log"
 	"strconv"
 	"strings"
 	"time"
@@ -15,12 +16,13 @@ const (
 func main() {
 	now := time.Now()
 	year := now.Year()
-	monthLower := strings.ToLower(now.Month().String())
+	// 30日や31日といった月末日付のずれを考慮して20日後を指定する。
+	monthLower := strings.ToLower(now.AddDate(0, 0, 20).Month().String())
 	schedule, err := parse.Schedule(baseUrl + strconv.Itoa(year) + monthLower)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	if err = generate.Ics(monthLower, schedule); err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 }
