@@ -1,10 +1,10 @@
 package main
 
 import (
+	"cdk.tf/go/stack/modules"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/aws/jsii-runtime-go"
 	"github.com/cdktf/cdktf-provider-google-go/google/v6/provider"
-	"github.com/cdktf/cdktf-provider-google-go/google/v6/storagebucket"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -23,10 +23,7 @@ func NewMyStack(scope constructs.Construct, id string) cdktf.TerraformStack {
 		// 個人開発のためstate lockは不要
 	})
 
-	storagebucket.NewStorageBucket(stack, jsii.String("gcs_bucket"), &storagebucket.StorageBucketConfig{
-		Location: jsii.String("asia-northeast1"),
-		Name:     jsii.String("gunpla-calendar-exporter"),
-	})
+	modules.NewStorageBucket(stack)
 
 	return stack
 }
