@@ -4,6 +4,8 @@ go 1.22.1
 
 require github.com/chromedp/chromedp v0.9.5
 
+require github.com/stretchr/testify v1.8.4 // indirect
+
 require (
 	github.com/arran4/golang-ical v0.2.7
 	github.com/chromedp/cdproto v0.0.0-20240202021202-6d0b6a386732 // indirect
