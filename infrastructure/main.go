@@ -20,6 +20,7 @@ func NewMyStack(scope constructs.Construct, id string) cdktf.TerraformStack {
 	cdktf.NewGcsBackend(stack, &cdktf.GcsBackendConfig{
 		Bucket: jsii.String("gunpla-calendar-exporter-backend"),
 		Prefix: jsii.String("terraform/state"),
+		// 個人開発のためstate lockは不要
 	})
 
 	storagebucket.NewStorageBucket(stack, jsii.String("gcs_bucket"), &storagebucket.StorageBucketConfig{
