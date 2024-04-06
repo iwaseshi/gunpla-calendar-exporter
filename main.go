@@ -3,6 +3,7 @@ package main
 import (
 	"gunpla-calendar-exporter/internal/generate"
 	"gunpla-calendar-exporter/internal/parse"
+	"gunpla-calendar-exporter/internal/upload"
 	"log"
 	"strconv"
 	"strings"
@@ -22,7 +23,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err = generate.Ics(monthLower, schedule); err != nil {
+	path, err := generate.Ics(monthLower, schedule)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err = upload.CloudStorage(*path); err != nil {
 		log.Fatal(err)
 	}
 }

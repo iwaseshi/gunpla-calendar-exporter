@@ -1,6 +1,7 @@
 *.ics
 .DS_Store
 gunpla-calendar-exporter
+storage_key.json
 
 
 # cdktf and terraform ignores
