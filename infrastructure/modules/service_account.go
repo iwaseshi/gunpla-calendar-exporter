@@ -22,6 +22,12 @@ func NewAppServiceAccount(stack cdktf.TerraformStack) {
 					"members": [
 						"serviceAccount:` + *account.Email() + `"
 					]
+				},
+				{
+					"role":"roles/storage.legacyObjectReader",
+					"members": [
+						"allUsers"
+					]
 				}
 			]
 		}`),
