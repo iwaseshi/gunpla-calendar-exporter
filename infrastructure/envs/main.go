@@ -13,7 +13,6 @@ func NewMyStack(scope constructs.Construct, id string) cdktf.TerraformStack {
 	SetupGcsBackend(stack)
 
 	modules.NewStorageBucket(stack)
-	modules.NewAppServiceAccount(stack)
 
 	return stack
 }
