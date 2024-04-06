@@ -11,4 +11,5 @@ func NewStorageBucket(stack cdktf.TerraformStack) {
 		Location: jsii.String("asia-northeast1"),
 		Name:     jsii.String("gunpla-calendar-exporter"),
 	})
+
 }
