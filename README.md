@@ -5,15 +5,15 @@
 
 ![calender](assets/image.png)
 
-# URL一覧
+## URL一覧
 
 | カテゴリ | URL |
 | :-: | - |
 | 2024/04 | https://storage.cloud.google.com/gunpla-calendar-exporter/2024April.ics |
 
-# 設定例
+## 設定例
 
-## iOS (iPhone/iPad)
+### iOS (iPhone/iPad)
 
 * ホーム画面の `設定 (Settings)` を開く
 * `パスワードとアカウント (Passwords & Accounts)` -> `アカウントを追加 (Add Account)`
@@ -22,7 +22,7 @@
 * URL を貼り付けて `次へ (Next)`
 * そのまま右上の `保存 (Save)`
 
-## Google Calendar (PC)
+### Google Calendar (PC)
 
 * icsファイルのリンクをクリックしファイルをダウンロードする。
 * `設定` を開く
