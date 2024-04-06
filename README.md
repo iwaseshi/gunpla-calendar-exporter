@@ -1,7 +1,7 @@
 # gunpla-calendar-exporter
 
 確定しているガンプラの発売日 を
-任意のカレンダーアプリ等に登録できる `ics` ファイル
+任意のカレンダーアプリ等に登録できる `ics` ファイルを出力する。
 
 ![calender](assets/image.png)
 
