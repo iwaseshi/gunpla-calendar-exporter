@@ -9,7 +9,7 @@ import (
 	ical "github.com/arran4/golang-ical"
 )
 
-func Ics(filename string, source map[time.Time][]string) error {
+func Ics(filename string, source map[time.Time][]string) (*string, error) {
 	cal := ical.NewCalendar()
 	cal.SetMethod(ical.MethodRequest)
 
@@ -22,18 +22,19 @@ func Ics(filename string, source map[time.Time][]string) error {
 
 		}
 	}
-	file, err := os.Create(filepath.Join("./gen", filename+".ics"))
+	outputoFilePath := filepath.Join("./gen", filename+".ics")
+	file, err := os.Create(outputoFilePath)
 	if err != nil {
 		fmt.Println("Error creating ICS file:", err)
-		return err
+		return nil, err
 	}
 	defer file.Close()
 
 	_, err = file.WriteString(cal.Serialize())
 	if err != nil {
 		fmt.Println("Error writing to ICS file:", err)
-		return err
+		return nil, err
 	}
 	fmt.Println("ICS file created successfully")
-	return nil
+	return &outputoFilePath, nil
 }
