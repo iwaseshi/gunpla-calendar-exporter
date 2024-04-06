@@ -7,7 +7,7 @@
 
 ## URL一覧
 
-| カテゴリ | URL |
+| Month | URL |
 | :-: | - |
 | 2024/04 | <https://storage.cloud.google.com/gunpla-calendar-exporter/2024April.ics> |
 
