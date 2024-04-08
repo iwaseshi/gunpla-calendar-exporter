@@ -22,7 +22,11 @@ func Ics(filename string, source map[time.Time][]string) (*string, error) {
 
 		}
 	}
-	outputoFilePath := filepath.Join("./gen", filename+".ics")
+	projectRoot := os.Getenv("GUNPLA_CALENDAR_EXPORTER_ROOT")
+	if projectRoot == "" {
+		return nil, fmt.Errorf("GUNPLA_CALENDAR_EXPORTER_ROOT environment variable is not set.")
+	}
+	outputoFilePath := filepath.Join(projectRoot, "gen", filename+".ics")
 	file, err := os.Create(outputoFilePath)
 	if err != nil {
 		fmt.Println("Error creating ICS file:", err)
