@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"io"
-	"log"
 	"os"
 	"time"
 
@@ -18,7 +17,7 @@ func CloudStorage(targetFilePath string) error {
 
 	file, err := os.Open(targetFilePath)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	defer file.Close()
 
