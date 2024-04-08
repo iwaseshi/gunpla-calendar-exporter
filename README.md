@@ -53,6 +53,7 @@ PC から追加後はモバイル版 Google Calendar でも閲覧できる。
 (アップロード無しの場合は実行時に`-upload false`を実行時引数に指定する。)
 
 * GCPにプロジェクトを立てる。名称は任意で構わないが「gunpla-calendar-exporter」にしておくとソースコードの変更なく以降の手順に進める。
+* GCSバケットにstateファイルを管理するバケットを用意する。名称は任意で構わないが「gunpla-calendar-exporter-backend」にしておくとソースコードの変更なく以降の手順に進める。
 * CDKTFの使用が可能な状態にする。
   * 特別な手順は必要なく、ぐぐれば出てくるのでここでは詳細は省略する。
 * ターミナルで本ツール配下のinfrastructure/envs に移動し、cdktf applyを実行する。
@@ -63,5 +64,11 @@ PC から追加後はモバイル版 Google Calendar でも閲覧できる。
 
 依存ライブラリ
 
+app
+
 * github.com/chromedp/chromedp
 * github.com/arran4/golang-ical
+
+infra
+
+* github.com/hashicorp/terraform-cdk-go/cdktf
