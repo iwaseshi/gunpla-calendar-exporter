@@ -22,6 +22,7 @@ func Schedule(url string) (map[time.Time][]string, error) {
 	defer cancel()
 
 	var result = make(map[time.Time][]string)
+	fmt.Println(url + " より再販情報を取得します。")
 	if err := chromedp.Run(ctx,
 		chromedp.Navigate(url),
 		chromedp.WaitVisible("body", chromedp.ByQuery),

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"gunpla-calendar-exporter/internal/generate"
 	"gunpla-calendar-exporter/internal/parse"
@@ -14,7 +15,12 @@ const (
 	baseUrl = "https://kaigoshinootakunaburogu.com/gunpla-resale-calendar-%d%s"
 )
 
+var (
+	toUpload = flag.Bool("upload", true, "flag")
+)
+
 func main() {
+	flag.Parse()
 	now := time.Now()
 	// 30日や31日といった月末日付のずれを考慮して20日後を指定する。
 	monthLower := strings.ToLower(now.AddDate(0, 0, 20).Month().String())
@@ -26,7 +32,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err = upload.CloudStorage(*path); err != nil {
-		log.Fatal(err)
+	if *toUpload {
+		fmt.Println("GCSへのアップロードを行います。")
+		if err = upload.CloudStorage(*path); err != nil {
+			log.Fatal(err)
+		}
 	}
 }
