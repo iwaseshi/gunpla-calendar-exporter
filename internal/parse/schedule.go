@@ -11,11 +11,12 @@ import (
 )
 
 var (
-	datePattern = regexp.MustCompile(`(\d{4})\s(\d{1,2})月(\d{1,2})日`)
+	datePattern1 = regexp.MustCompile(`(\d{4})\s(\d{1,2})月(\d{1,2})日`)
+	datePattern2 = regexp.MustCompile(`(\d{1,2})月(\d{1,2})日`)
 )
 
-func Schedule(url string) (map[time.Time][]string, error) {
-	ctx, cancel := chromedp.NewContext(context.Background())
+func Schedule(ctx context.Context, url string) (map[time.Time][]string, error) {
+	ctx, cancel := chromedp.NewContext(ctx)
 	defer cancel()
 
 	ctx, cancel = context.WithTimeout(ctx, 60*time.Second)
@@ -56,9 +57,18 @@ func Schedule(url string) (map[time.Time][]string, error) {
 }
 
 func convertDate(date string) (*time.Time, error) {
-	matches := datePattern.FindStringSubmatch(date)
+	matches := datePattern1.FindStringSubmatch(date)
+	matches2 := datePattern2.FindStringSubmatch(date)
 	if matches != nil {
 		dateStr := fmt.Sprintf("%s-%02s-%02s", matches[1], matches[2], matches[3])
+		date, err := time.Parse("2006-01-02", dateStr)
+		if err != nil {
+			fmt.Println("日付の変換に失敗しました:", err)
+			return nil, err
+		}
+		return &date, nil
+	} else if matches2 != nil {
+		dateStr := fmt.Sprintf("%d-%02s-%02s", time.Now().Year(), matches2[1], matches2[2])
 		date, err := time.Parse("2006-01-02", dateStr)
 		if err != nil {
 			fmt.Println("日付の変換に失敗しました:", err)
