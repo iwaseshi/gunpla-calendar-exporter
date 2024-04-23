@@ -29,15 +29,13 @@ func Ics(filename string, source map[time.Time][]string) (*string, error) {
 	outputoFilePath := filepath.Join(projectRoot, "gen", filename+".ics")
 	file, err := os.Create(outputoFilePath)
 	if err != nil {
-		fmt.Println("Error creating ICS file:", err)
-		return nil, err
+		return nil, fmt.Errorf("Error creating ICS file: %w", err)
 	}
 	defer file.Close()
 
 	_, err = file.WriteString(cal.Serialize())
 	if err != nil {
-		fmt.Println("Error writing to ICS file:", err)
-		return nil, err
+		return nil, fmt.Errorf("Error writing to ICS file:  %w", err)
 	}
 	fmt.Println("ICS file created successfully")
 	return &outputoFilePath, nil
