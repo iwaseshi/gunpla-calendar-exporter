@@ -63,16 +63,14 @@ func convertDate(date string) (*time.Time, error) {
 		dateStr := fmt.Sprintf("%s-%02s-%02s", matches[1], matches[2], matches[3])
 		date, err := time.Parse("2006-01-02", dateStr)
 		if err != nil {
-			fmt.Println("日付の変換に失敗しました:", err)
-			return nil, err
+			return nil, fmt.Errorf("日付の変換に失敗しました: %w", err)
 		}
 		return &date, nil
 	} else if matches2 != nil {
 		dateStr := fmt.Sprintf("%d-%02s-%02s", time.Now().Year(), matches2[1], matches2[2])
 		date, err := time.Parse("2006-01-02", dateStr)
 		if err != nil {
-			fmt.Println("日付の変換に失敗しました:", err)
-			return nil, err
+			return nil, fmt.Errorf("日付の変換に失敗しました: %w", err)
 		}
 		return &date, nil
 	} else {
