@@ -18,8 +18,8 @@ jobs:
         run: go mod tidy
       - name: Build and Run App
         run: |
-          go build -v ./main.go
-          ./main
+          go build -v ./cmd/main.go
+          ./main -upload false
         working-directory: ${{ github.workspace }}
       - name: Upload ICS File
         uses: actions/upload-artifact@v4
