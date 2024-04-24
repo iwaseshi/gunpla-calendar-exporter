@@ -18,6 +18,7 @@ jobs:
         run: go mod tidy
       - name: Build and Run App
         run: |
+          echo "GUNPLA_CALENDAR_EXPORTER_ROOT=${GITHUB_WORKSPACE}" >> $GITHUB_ENV
           go build -v ./cmd/main.go
           ./main -upload false
         working-directory: ${{ github.workspace }}
