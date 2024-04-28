@@ -3,7 +3,7 @@ name: Run Gunpla-calendar-exporter
 on:
   schedule:
     - cron: "0 15 14 * *" # 毎月15日の日本時間0時（UTCの前日15時）
-    - cron: "0 15 25 * *" # 毎月26日の日本時間0時（UTCの前日15時）
+    - cron: "0 15 29 * *" # 毎月26日の日本時間0時（UTCの前日15時）
 
 env:
   GUNPLA_CALENDAR_EXPORTER_ROOT: ${{ github.workspace }}
@@ -22,7 +22,7 @@ jobs:
       - name: Build and Run App
         run: |
           go build -v ./cmd/main.go
-          ./main -upload false
+          ./main -upload=false
         working-directory: ${{ github.workspace }}
       - name: Upload ICS File
         uses: actions/upload-artifact@v4
