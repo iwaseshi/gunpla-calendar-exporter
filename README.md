@@ -52,7 +52,7 @@ PC から追加後はモバイル版 Google Calendar でも閲覧できる。
   * 例：MacのUser配下にCloneした場合は、"User/{YOUR NAME}/gunpla-calendar-exporter"を代入する。
 
 以下からはGCSへのアップロードを行うための手順となる。ローカルにicsを出力するのみの場合は下記手順は省略して良い。
-(アップロード無しの場合は実行時に`-upload false`を実行時引数に指定する。)
+(アップロード無しの場合は実行時に`-upload=false`を実行時引数に指定する。)
 
 * GCPにプロジェクトを立てる。名称は任意で構わないが「gunpla-calendar-exporter」にしておくとソースコードの変更なく以降の手順に進める。
 * GCSバケットにstateファイルを管理するバケットを用意する。名称は任意で構わないが「gunpla-calendar-exporter-backend」にしておくとソースコードの変更なく以降の手順に進める。
@@ -60,7 +60,7 @@ PC から追加後はモバイル版 Google Calendar でも閲覧できる。
   * 特別な手順は必要なく、ぐぐれば出てくるのでここでは詳細は省略する。
 * ターミナルで本ツール配下のinfrastructure/envs に移動し、cdktf applyを実行する。
 * apply成功後にGCPのコンソールに移動し、サービスアカウントからapp accountという名称のアカウントのキーをJSONで取得する。
-* 上記で取得したキー情報のJSONをcmd配下にstorage_key.jsonという名称で配置する。
+* 上記で取得したキー情報のJSONをstorage_key.jsonという名称でプロジェクトのルートに配置する。
 
 ## appendix
 
