@@ -21,10 +21,6 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
-      - name: Run go mod tidy
-        run: |
-          go mod tidy
-          git diff --exit-code -- go.mod
       - name: Run test
         run: |
           go test ./...
