@@ -6,6 +6,8 @@ github.com/aws/jsii-runtime-go v1.90.0 h1:Kbw+bAy1etfyYSpNu09a12N9taT+/NxRDnfvgt
 github.com/aws/jsii-runtime-go v1.90.0/go.mod h1:xLBI2fKjWK68+eqqmvkv4HL1f4YUPLiAi5BT3wNUD74=
 github.com/aws/jsii-runtime-go v1.97.0 h1:z3g6aLUQUyjZfHFI4z6Q47zvwUjyGYPamOWcVwGmU9w=
 github.com/aws/jsii-runtime-go v1.97.0/go.mod h1:30XYoqvHizeedL8KNra3DBZ9w+NtJDQpbU4o1bN9lVc=
+github.com/aws/jsii-runtime-go v1.98.0 h1:ulW8WgW9xchCkGc8SBKSQwpm+4/MwoFkYuCsOD8NnMU=
+github.com/aws/jsii-runtime-go v1.98.0/go.mod h1:30XYoqvHizeedL8KNra3DBZ9w+NtJDQpbU4o1bN9lVc=
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.16.0/go.mod h1:pvo/IIw8y3dfC9QxX1b9uoiKl7pv/6jfVyzt+MpvxkE=
 github.com/cdktf/cdktf-provider-google-go/google/v6 v6.0.0 h1:bbpV6EdJQ8kTSlFr+5pDJPTXqAyOB0H49/rRIEw2ny0=
 github.com/cdktf/cdktf-provider-google-go/google/v6 v6.0.0/go.mod h1:j0wLn+62d5c4xbnynafjW/dpcwh6v9hMX1lddCcGvlU=
