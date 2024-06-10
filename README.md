@@ -5,12 +5,9 @@
 
 ![calender](assets/image.png)
 
-## URL一覧
+## 最新ICSファイル
 
-| Month | URL |
-| :-: | - |
-| 2024/04 | <https://storage.cloud.google.com/gunpla-calendar-exporter/2024April.ics> |
-| 2024/05 | <https://storage.cloud.google.com/gunpla-calendar-exporter/2024May.ics> |
+<https://storage.cloud.google.com/gunpla-calendar-exporter/latest.ics>
 
 ## 設定例
 

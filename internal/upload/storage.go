@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"time"
 
 	"cloud.google.com/go/storage"
 	"google.golang.org/api/option"
@@ -20,8 +19,7 @@ func CloudStorage(ctx context.Context, targetFilePath string) error {
 	defer file.Close()
 
 	bucketName := "gunpla-calendar-exporter"
-	now := time.Now()
-	objectPath := fmt.Sprintf("%d%s.ics", now.Year(), now.AddDate(0, 0, 20).Month().String())
+	objectPath := "latest.ics"
 
 	storage, err := newCloudStorage(ctx, bucketName)
 	if err != nil {
