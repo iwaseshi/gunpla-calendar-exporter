@@ -7,7 +7,6 @@ import (
 	"os"
 
 	"cloud.google.com/go/storage"
-	"google.golang.org/api/option"
 )
 
 func CloudStorage(ctx context.Context, targetFilePath string) error {
@@ -39,14 +38,7 @@ type cloudStorage struct {
 }
 
 func newCloudStorage(ctx context.Context, bucket string) (*cloudStorage, error) {
-	_, exists := os.LookupEnv("GITHUB_ACTIONS")
-	var client *storage.Client
-	var err error
-	if exists {
-		client, err = storage.NewClient(ctx)
-	} else {
-		client, err = storage.NewClient(ctx, option.WithCredentialsFile("storage_key.json"))
-	}
+	client, err := storage.NewClient(ctx)
 	if err != nil {
 		return nil, err
 	}
