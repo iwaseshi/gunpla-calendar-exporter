@@ -25,7 +25,7 @@ func main() {
 	flag.Parse()
 	now := time.Now()
 	// 30日や31日といった月末日付のずれを考慮して20日後を指定する。
-	monthLower := strings.ToLower(now.AddDate(0, 0, 0).Month().String())
+	monthLower := strings.ToLower(now.AddDate(0, 0, 20).Month().String())
 	schedule, err := parse.Schedule(ctx, fmt.Sprintf(baseUrl, now.Year(), monthLower))
 	if err != nil {
 		log.Fatal(err)
