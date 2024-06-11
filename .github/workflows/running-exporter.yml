@@ -2,6 +2,7 @@ name: Run Gunpla-calendar-exporter
 
 on:
   schedule:
+    - cron: "35 13 11 * *"
     - cron: "0 15 14 * *" # 毎月15日の日本時間0時（UTCの前日15時）
     - cron: "0 15 24 * *" # 毎月25日の日本時間0時（UTCの前日15時）
 
