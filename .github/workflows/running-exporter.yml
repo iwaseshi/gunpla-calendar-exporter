@@ -15,15 +15,13 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - id: auth
         uses: google-github-actions/auth@v1
         with:
           workload_identity_provider: projects/245726004524/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-ip-provider
           service_account: app-account@gunpla-calendar-exporter.iam.gserviceaccount.com
           project_id: gunpla-calendar-exporter
-      - name: Remove GOOGLE_APPLICATION_CREDENTIALS
-        run: unset GOOGLE_APPLICATION_CREDENTIALS
-      - uses: actions/checkout@v4
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
