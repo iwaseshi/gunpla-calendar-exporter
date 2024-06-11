@@ -18,7 +18,7 @@ jobs:
       - id: auth
         uses: google-github-actions/auth@v1
         with:
-          workload_identity_provider: projects/245726004524/locations/global/workloadIdentityPools/wi-pool/providers/github-actions-ip-provider
+          workload_identity_provider: projects/245726004524/locations/global/workloadIdentityPools/github-actions-pool/attribute.repository/iwaseshi/gunpla-calendar-exporter
           service_account: app-account@gunpla-calendar-exporter.iam.gserviceaccount.com
           project_id: gunpla-calendar-exporter
       - uses: actions/checkout@v4
