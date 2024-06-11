@@ -19,7 +19,7 @@ jobs:
       - id: auth
         uses: google-github-actions/auth@v1
         with:
-          workload_identity_provider: projects/245726004524/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-ip-provider
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_POOL }}
           service_account: app-account@gunpla-calendar-exporter.iam.gserviceaccount.com
           project_id: gunpla-calendar-exporter
       - name: Set up Go
