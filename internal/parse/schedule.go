@@ -40,7 +40,10 @@ func Schedule(ctx context.Context, url string) (map[time.Time][]string, error) {
 				if err != nil {
 					continue
 				}
-				result[*date] = lines[1:]
+				filterd := filterGunplaSchedules(lines[1:])
+				if len(filterd) > 0 {
+					result[*date] = filterd
+				}
 			}
 			return nil
 		}),
@@ -76,4 +79,14 @@ func convertDate(date string) (*time.Time, error) {
 	} else {
 		return nil, fmt.Errorf("日付の形式に合致する文字列が見つかりませんでした。")
 	}
+}
+
+func filterGunplaSchedules(input []string) []string {
+	var result []string
+	for _, str := range input {
+		if strings.Contains(str, "HG") || strings.Contains(str, "MG") || strings.Contains(str, "RG") || strings.Contains(str, "EG") {
+			result = append(result, str)
+		}
+	}
+	return result
 }
