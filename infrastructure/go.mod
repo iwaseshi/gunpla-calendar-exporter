@@ -13,12 +13,12 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/yuin/goldmark v1.4.13 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
-	golang.org/x/mod v0.17.0 // indirect
-	golang.org/x/sys v0.20.0 // indirect
-	golang.org/x/tools v0.21.0 // indirect
+	golang.org/x/mod v0.18.0 // indirect
+	golang.org/x/sys v0.21.0 // indirect
+	golang.org/x/tools v0.22.0 // indirect
 )
 
 require (
-	github.com/aws/jsii-runtime-go v1.99.0
-	github.com/cdktf/cdktf-provider-google-go/google/v13 v13.22.0
+	github.com/aws/jsii-runtime-go v1.100.0
+	github.com/cdktf/cdktf-provider-google-go/google/v13 v13.24.0
 )
