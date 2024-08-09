@@ -51,11 +51,10 @@ func Schedule(ctx context.Context, url string) (map[time.Time][]string, error) {
 		return nil, err
 	}
 	if len(result) == 0 {
-		return nil, fmt.Errorf("スケジュールが取得できませんでした。")
+		fmt.Println("スケジュールが取得できませんでした。")
+		return result, nil
 	}
-	for k, v := range result {
-		fmt.Printf("Key: %s \n Value: %v\n\n", k, v)
-	}
+	fmt.Println(url + " から発売スケジュールが取得できました。")
 	return result, nil
 }
 
