@@ -4,7 +4,7 @@ go 1.22.4
 
 require github.com/aws/constructs-go/constructs/v10 v10.3.0
 
-require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.7
+require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.8
 
 require (
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
