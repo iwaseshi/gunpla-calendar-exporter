@@ -4,7 +4,7 @@ go 1.22.6
 
 require github.com/aws/constructs-go/constructs/v10 v10.3.0
 
-require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.8
+require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.9
 
 require (
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
@@ -22,4 +22,5 @@ require (
 require (
 	github.com/aws/jsii-runtime-go v1.103.1
 	github.com/cdktf/cdktf-provider-google-go/google/v13 v13.32.1
+	github.com/cdktf/cdktf-provider-google-go/google/v14 v14.4.0
 )

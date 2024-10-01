@@ -18,6 +18,7 @@ github.com/cdktf/cdktf-provider-google-go/google/v13 v13.29.0 h1:6Xk5AnT+BkBdZR6
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.29.0/go.mod h1:mVl5KEjcY6E2hwg9NdWR26PR9wdnBEJxWiDSRA6yv2Q=
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.32.1 h1:vLWvBlM4JojOt4B0vgQjV+QL8kIbFTgWm16Aod1Qsjc=
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.32.1/go.mod h1:mVl5KEjcY6E2hwg9NdWR26PR9wdnBEJxWiDSRA6yv2Q=
+github.com/cdktf/cdktf-provider-google-go/google/v14 v14.4.0/go.mod h1:wnF+J3nUIXUi0dKRd/ZFZ+UXcCADNWsojTJVl7nsJEM=
 github.com/cdktf/cdktf-provider-google-go/google/v6 v6.0.0 h1:bbpV6EdJQ8kTSlFr+5pDJPTXqAyOB0H49/rRIEw2ny0=
 github.com/cdktf/cdktf-provider-google-go/google/v6 v6.0.0/go.mod h1:j0wLn+62d5c4xbnynafjW/dpcwh6v9hMX1lddCcGvlU=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
@@ -30,6 +31,8 @@ github.com/hashicorp/terraform-cdk-go/cdktf v0.20.7 h1:2qYAJMPlFg4zU8TfZWDa3nyaM
 github.com/hashicorp/terraform-cdk-go/cdktf v0.20.7/go.mod h1:wAVKV4pDFnayGSCerTah8NQTIcNvi6HGI5fhRoCX3Zw=
 github.com/hashicorp/terraform-cdk-go/cdktf v0.20.8 h1:uodLLTOrh0AuLCMURCGxM30vyLwqNX7aEg7R4wpziUI=
 github.com/hashicorp/terraform-cdk-go/cdktf v0.20.8/go.mod h1:Vmk9GU8VTgKZB9b+ttuW+KLWOeFRzGsUzszHu8It1KU=
+github.com/hashicorp/terraform-cdk-go/cdktf v0.20.9 h1:TZ9TkO6ba6Uj7XRpp3OcrNqBjN6srfqQObPPSPcASkk=
+github.com/hashicorp/terraform-cdk-go/cdktf v0.20.9/go.mod h1:1qQeNydHdUQESUQoVXLcrgB/qmOGwv9m7g61xPtrkg0=
 github.com/mattn/go-colorable v0.1.13 h1:fFA4WZxdEF4tXPZVKMLwD8oUnCTTo08duU7wxecdEvA=
 github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovkB8vQcUbaXHg=
 github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
