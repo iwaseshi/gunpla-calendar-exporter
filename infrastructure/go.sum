@@ -18,6 +18,7 @@ github.com/cdktf/cdktf-provider-google-go/google/v13 v13.29.0 h1:6Xk5AnT+BkBdZR6
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.29.0/go.mod h1:mVl5KEjcY6E2hwg9NdWR26PR9wdnBEJxWiDSRA6yv2Q=
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.32.1 h1:vLWvBlM4JojOt4B0vgQjV+QL8kIbFTgWm16Aod1Qsjc=
 github.com/cdktf/cdktf-provider-google-go/google/v13 v13.32.1/go.mod h1:mVl5KEjcY6E2hwg9NdWR26PR9wdnBEJxWiDSRA6yv2Q=
+github.com/cdktf/cdktf-provider-google-go/google/v14 v14.4.0/go.mod h1:wnF+J3nUIXUi0dKRd/ZFZ+UXcCADNWsojTJVl7nsJEM=
 github.com/cdktf/cdktf-provider-google-go/google/v6 v6.0.0 h1:bbpV6EdJQ8kTSlFr+5pDJPTXqAyOB0H49/rRIEw2ny0=
 github.com/cdktf/cdktf-provider-google-go/google/v6 v6.0.0/go.mod h1:j0wLn+62d5c4xbnynafjW/dpcwh6v9hMX1lddCcGvlU=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
