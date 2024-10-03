@@ -2,12 +2,12 @@ package modules
 
 import (
 	"github.com/aws/jsii-runtime-go"
-	"github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkloadidentitypool"
-	"github.com/cdktf/cdktf-provider-google-go/google/v13/iamworkloadidentitypoolprovider"
-	"github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccount"
-	"github.com/cdktf/cdktf-provider-google-go/google/v13/serviceaccountiammember"
-	"github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucket"
-	"github.com/cdktf/cdktf-provider-google-go/google/v13/storagebucketiampolicy"
+	"github.com/cdktf/cdktf-provider-google-go/google/v14/iamworkloadidentitypool"
+	"github.com/cdktf/cdktf-provider-google-go/google/v14/iamworkloadidentitypoolprovider"
+	"github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccount"
+	"github.com/cdktf/cdktf-provider-google-go/google/v14/serviceaccountiammember"
+	"github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucket"
+	"github.com/cdktf/cdktf-provider-google-go/google/v14/storagebucketiampolicy"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

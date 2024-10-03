@@ -58,11 +58,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if *toUpload {
-		fmt.Println("GCSへのアップロードを行います。")
-		if err = upload.CloudStorage(ctx, *path); err != nil {
-			log.Fatal(err)
-		}
+	if !*toUpload {
+		return
+	}
+	fmt.Println("GCSへのアップロードを行います。")
+	if err = upload.CloudStorage(ctx, *path); err != nil {
+		log.Fatal(err)
 	}
 }
 
