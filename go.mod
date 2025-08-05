@@ -2,7 +2,7 @@ module gunpla-calendar-exporter
 
 go 1.23.2
 
-require github.com/chromedp/chromedp v0.10.0
+require github.com/chromedp/chromedp v0.14.1
 
 require (
 	cloud.google.com/go v0.115.1 // indirect
