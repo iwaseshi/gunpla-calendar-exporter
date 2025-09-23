@@ -39,7 +39,7 @@ require (
 )
 
 require (
-	cloud.google.com/go/storage v1.43.0
+	cloud.google.com/go/storage v1.57.0
 	github.com/arran4/golang-ical v0.3.1
 	github.com/chromedp/cdproto v0.0.0-20240801214329-3f85d328b335 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
