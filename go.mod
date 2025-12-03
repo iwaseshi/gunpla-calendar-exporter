@@ -50,5 +50,5 @@ require (
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/orisano/pixelmatch v0.0.0-20230914042517-fa304d1dc785 // indirect
 	golang.org/x/sys v0.25.0 // indirect
-	google.golang.org/api v0.199.0
+	google.golang.org/api v0.257.0
 )
