@@ -1,6 +1,6 @@
 module gunpla-calendar-exporter
 
-go 1.23.2
+go 1.27.1
 
 require github.com/chromedp/chromedp v0.10.0
 
