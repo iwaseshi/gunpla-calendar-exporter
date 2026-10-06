@@ -1,8 +1,8 @@
 module gunpla-calendar-exporter
 
-go 1.23.2
+go 1.25
 
-require github.com/chromedp/chromedp v0.10.0
+require github.com/chromedp/chromedp v0.20.1
 
 require (
 	cloud.google.com/go v0.115.1 // indirect
@@ -11,6 +11,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.5.2 // indirect
 	cloud.google.com/go/iam v1.2.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
+	github.com/go-json-experiment/json v0.0.0-20260213210345-44df1a37e875 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
@@ -41,7 +42,7 @@ require (
 require (
 	cloud.google.com/go/storage v1.43.0
 	github.com/arran4/golang-ical v0.3.1
-	github.com/chromedp/cdproto v0.0.0-20240801214329-3f85d328b335 // indirect
+	github.com/chromedp/cdproto v0.157.8 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
 	github.com/gobwas/pool v0.2.1 // indirect
